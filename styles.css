@@ -1,0 +1,34 @@
+:root { font: 15px/1.5 Inter, system-ui, sans-serif; color: #172632; background: #f1f5f4; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.wrap { width: min(1120px, calc(100% - 36px)); margin-inline: auto; }
+header { background: #102b2b; color: white; }
+.brand { display: flex; align-items: center; gap: 12px; min-height: 68px; font-weight: 800; }
+.mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: #b9f3d2; color: #102b2b; }
+.demo { margin-left: auto; color: #c5ded8; font-size: .8rem; font-weight: 500; }
+main { padding-block: 36px 60px; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.06em; margin: 0; }
+h2 { font-size: 1.15rem; margin: 0 0 16px; }
+.muted { color: #52656a; margin: 4px 0 22px; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.metrics div, .panel { background: white; border: 1px solid #dbe5e1; border-radius: 14px; padding: clamp(12px, 2.5vw, 24px); }
+.metrics span { color: #52656a; font-size: .85rem; }
+.metrics strong { display: block; font-size: 2rem; }
+#overdue { color: #9a432e; }
+.layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr); gap: 18px; align-items: start; }
+aside { display: grid; gap: 18px; }
+.filters { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+label { display: grid; gap: 5px; font-size: .83rem; font-weight: 600; }
+input, select, button { font: inherit; min-width: 0; min-height: 40px; border: 1px solid #bfcfc9; border-radius: 8px; background: white; color: inherit; padding: 7px 9px; }
+form { display: grid; gap: 10px; }
+button { background: #12664e; color: white; border: 0; font-weight: 700; cursor: pointer; }
+button:hover { background: #0c513d; }
+:focus-visible { outline: 3px solid #167c5e; outline-offset: 2px; }
+.queue, #activity { list-style: none; margin: 14px 0 0; padding: 0; }
+.queue li, #activity li { border-top: 1px solid #e0e8e5; padding: 12px 0; overflow-wrap: anywhere; }
+.queue li { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.queue select { flex: 0 0 auto; max-width: 42%; }
+.detail, #activity time { display: block; color: #52656a; font-size: .8rem; }
+.late { color: #9a432e; font-weight: 700; }
+#feedback { color: #234f43; }
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }

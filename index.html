@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpsLedger � Operations workspace</title>
+<link rel="stylesheet" href="styles.css">
+<script src="model.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header><div class="wrap brand"><span class="mark" aria-hidden="true">O</span> OpsLedger <span class="demo" id="workspace-mode">Demo workspace</span></div></header>
+<main class="wrap">
+  <h1>Operations overview</h1>
+  <p class="muted">Track work, deadlines, and changes across your team.</p>
+  <section class="metrics" aria-label="Work summary">
+    <div><span>Active work</span><strong id="active">0</strong></div>
+    <div><span>Overdue</span><strong id="overdue">0</strong></div>
+    <div><span>Completed</span><strong id="done">0</strong></div>
+  </section>
+  <div class="layout">
+    <section class="panel" aria-labelledby="queue-heading">
+      <h2 id="queue-heading">Work queue</h2>
+      <div class="filters">
+        <label>Search<input id="search" type="search" placeholder="Title or owner"></label>
+        <label>Status<select id="filter"><option value="">All statuses</option></select></label>
+      </div>
+      <ul id="queue" class="queue"></ul>
+    </section>
+    <aside>
+      <section class="panel">
+        <h2>Add work item</h2>
+        <form id="new-item">
+          <label>Title<input name="title" required maxlength="90"></label>
+          <label>Owner<input name="owner" required maxlength="45"></label>
+          <label>Due date<input name="due" type="date" required></label>
+          <button>Add to queue</button>
+        </form>
+      </section>
+      <section class="panel">
+        <h2>Recent activity</h2>
+        <ol id="activity"></ol>
+      </section>
+    </aside>
+  </div>
+  <p id="feedback" role="status"></p>
+</main>
+</body>
+</html>
